@@ -1,20 +1,31 @@
 #6 tempo
-segundos = int(input("Digite a quantidade de segundos: "))
+print("Escolha uma opção:")
+print("1 - Converter segundos para horas, minutos e segundos")
+print("2 - Converter horas para horas, minutos e segundos")
 
-horas = segundos // 3600
-resto = segundos % 3600
+opcao = int(input("Digite 1 ou 2: ")) # variavel "opcao" pedira os numeros 1 ou 2 como opções de converção de tempo
 
-minutos = resto // 60
-segundos_restantes = resto % 60
+if opcao == 1: # se escolher opção 1
+    segundos = int(input("Digite o número de segundos: ")) # variavel segundos solicita os segundos do tempo 
+    
+    horas = segundos // 3600 # variavel horas é igual a segundos dividido inteiro por 3600
+    resto = segundos % 3600 # variavel resto sera igual asegundos e vai retornar a sobra da divisão inteira 
+    minutos = resto // 60 # variavel minutos sera igual a resto dividido inteiro pro 60
+    segundos_restantes = resto % 60 # variavel "segundos_restantes" sera igual a "resto" retornando a sobra para divisão inteira 
 
-print("Horas:", horas)
-print("Minutos:", minutos)
-print("Segundos:", segundos_restantes)
+    print(f"{horas} hora(s), {minutos} minuto(s) e {segundos_restantes} segundo(s)") # mostrara o resultado da coverção
 
-horas = int(input("Digite as horas: "))
-minutos = int(input("Digite os minutos: "))
-segundos = int(input("Digite os segundos: "))
+elif opcao == 2: # se escolher opção 2
+    horas = float(input("Digite o número de horas: ")) # variavel 
+    
+    total_segundos = int(horas * 3600)
 
-total_segundos = horas * 3600 + minutos * 60 + segundos
+    h = total_segundos // 3600
+    resto = total_segundos % 3600
+    m = resto // 60
+    s = resto % 60
 
-print("Total em segundos:", total_segundos)
+    print(f"{h} hora(s), {m} minuto(s) e {s} segundo(s)")
+
+else:
+    print("Opção inválida!")
