@@ -13,19 +13,19 @@ if opcao == 1: # se escolher opção 1
     minutos = resto // 60 # variavel minutos sera igual a resto dividido inteiro pro 60
     segundos_restantes = resto % 60 # variavel "segundos_restantes" sera igual a "resto" retornando a sobra para divisão inteira 
 
-    print(f"{horas} hora(s), {minutos} minuto(s) e {segundos_restantes} segundo(s)") # mostrara o resultado da coverção
+    print(print(horas, "hora(s),", minutos, "minuto(s) e", segundos_restantes, "segundo(s)")) # mostrara o resultado da coverção
 
 elif opcao == 2: # se escolher opção 2
-    horas = float(input("Digite o número de horas: ")) # variavel 
+    horas = float(input("Digite o número de horas: ")) # variavel "horas" vai pedir as horas 
     
-    total_segundos = int(horas * 3600)
+    total_segundos = int(horas * 3600) #variavel total_segundos vai ser igual a divisão de horas por 3600
 
-    h = total_segundos // 3600
-    resto = total_segundos % 3600
-    m = resto // 60
-    s = resto % 60
+    h = total_segundos // 3600 # "h" vai ser igual total_segundos dividido por inteiro po 3600
+    resto = total_segundos % 3600 # resto vai retornar o que sobrar de h 
+    m = resto // 60 # m vai ser igual a resto dividido por inteiro por 60
+    s = resto % 60 # s vai ser igual o resto que vai retornar da divisão inteira
 
-    print(f"{h} hora(s), {m} minuto(s) e {s} segundo(s)")
+    print(h,"hora(s)", m,"minuto(s)",s,"sugundo(s)" ) # vai mostrar a converção das horas
 
 else:
-    print("Opção inválida!")
+    print("Opção inválida!") # se não escolher nenhuma das opções vai dar invalida
